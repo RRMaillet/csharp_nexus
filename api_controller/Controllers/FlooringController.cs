@@ -1,4 +1,6 @@
-﻿using api_controller.Models;
+﻿using api_controller.Filters;
+using api_controller.Models;
+using api_controller.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api_controller.Controllers
@@ -8,17 +10,6 @@ namespace api_controller.Controllers
     [Route("api/[controller]")]
     public class FlooringController : ControllerBase
     {
-        private List<Floor> floors = new List<Floor>()
-        {
-            new Floor{ FloorId= 12, FloorName="Laminate", FloorColor="Beige", FloorDescription="Beige Laminate Floor", Price=1.53},
-            new Floor{ FloorId= 15, FloorName="Cork", FloorColor="Brown", FloorDescription="Brown Cork Floor", Price=2.10},
-            new Floor{ FloorId= 18, FloorName="Leather", FloorColor="Black", FloorDescription="Black Leather Floor", Price=4.53},
-            new Floor{ FloorId= 19, FloorName="Wood", FloorColor="Green", FloorDescription="Green Wood Floor", Price=2.99},
-            new Floor{ FloorId= 21, FloorName="Polycarbonate", FloorColor="Clear", FloorDescription="Clear Polycarbonate Floor", Price=0.95}
-        };
-
-
-
         [HttpGet]
         public IActionResult GetFloors()
         {
@@ -26,18 +17,11 @@ namespace api_controller.Controllers
         }
 
         [HttpGet("{id}")]
+        [Floor_ValidateFloorIdFilter]
         public IActionResult GetFloorById(int id)
         {
-            if (id <= 0) return BadRequest(id.ToString());
-
-            var floor = floors.FirstOrDefault(x => x.FloorId == id);
-
-            if (floor == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(floor);
+            
+            return Ok(FloorRepository.GetFloorById(id));
         }
 
         [HttpPost]
