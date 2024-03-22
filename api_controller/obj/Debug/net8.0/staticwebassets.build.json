@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "x90PTcGJBMxmG3ysq8O6K4qcrg2+CjtjVphfDNukwtw=",
+  "Source": "api_controller",
+  "BasePath": "_content/api_controller",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
