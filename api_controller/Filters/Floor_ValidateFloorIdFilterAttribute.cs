@@ -17,12 +17,20 @@ namespace api_controller.Filters
                 if (floorId.Value <= 0) 
                 {
                     context.ModelState.AddModelError("FloorId", "FloorId is invalid.");
-                    context.Result = new BadRequestObjectResult(context.ModelState);
+                    var problemDetails = new ValidationProblemDetails(context.ModelState)
+                    {
+                        Status = StatusCodes.Status400BadRequest
+                    };
+                    context.Result = new BadRequestObjectResult(problemDetails);
                 }
                 else if (!FloorRepository.FloorExists(floorId.Value))
                 {
                     context.ModelState.AddModelError("FloorId", "Floor does not exist.");
-                    context.Result = new NotFoundObjectResult(context.ModelState);
+                    var problemDetails = new ValidationProblemDetails(context.ModelState)
+                    { 
+                        Status = StatusCodes.Status404NotFound
+                    };
+                    context.Result = new NotFoundObjectResult(problemDetails);
                 }
             }
         }
