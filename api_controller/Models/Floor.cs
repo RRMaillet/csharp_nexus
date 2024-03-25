@@ -11,12 +11,12 @@ namespace api_controller.Models
 
     public class Floor
     {
-        [Required]
         public int FloorId { get; set; }
 
         [Required]
         public string? FloorName { get; set;}
 
+        [Required]
         public string? FloorColor { get; set;}
 
         public string? FloorDescription { get; set;}

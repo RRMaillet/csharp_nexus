@@ -11,6 +11,29 @@
             new Floor{ FloorId= 21, FloorName="Polycarbonate", FloorColor="Clear", FloorDescription="Clear Polycarbonate Floor", Price=0.95}
         };
 
+        public static List<Floor> GetAllFloors() { 
+        
+            return floors; 
+
+        }
+
+        public static void AddFloor(Floor floor)
+        {
+            int maxId = floors.Max(x => x.FloorId);
+            floor.FloorId = maxId + 1;
+
+            floors.Add(floor);
+        }
+
+        public static Floor? GetFloorByProperties(string? floorName, string? floorColor)
+        {
+            return floors.FirstOrDefault(x => !string.IsNullOrWhiteSpace(floorName) 
+                                            && !string.IsNullOrWhiteSpace(x.FloorName) 
+                                            && x.FloorName.Equals(floorName, StringComparison.OrdinalIgnoreCase)
+                                            && !string.IsNullOrWhiteSpace(floorColor)
+                                            && !string.IsNullOrWhiteSpace(x.FloorColor)
+                                            && x.FloorColor.Equals(floorColor, StringComparison.OrdinalIgnoreCase));
+        }
 
         public static bool FloorExists(int id)
         {

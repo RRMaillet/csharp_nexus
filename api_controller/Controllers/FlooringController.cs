@@ -13,7 +13,7 @@ namespace api_controller.Controllers
         [HttpGet]
         public IActionResult GetFloors()
         {
-            return Ok("Reading all the floors...");
+            return Ok(FloorRepository.GetAllFloors());
         }
 
         [HttpGet("{id}")]
@@ -25,9 +25,11 @@ namespace api_controller.Controllers
         }
 
         [HttpPost]
+        [Floor_ValidateCreateFloorFilter]
         public IActionResult CreateFloor([FromBody] Floor floor)
         {
-            return Ok($"Creating a floor!");
+            FloorRepository.AddFloor(floor);
+            return CreatedAtAction(nameof(GetFloorById), new {id = floor.FloorId}, floor);
         }
 
         [HttpPost("{id}")]
