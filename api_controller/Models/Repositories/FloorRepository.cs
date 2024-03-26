@@ -35,6 +35,17 @@
                                             && x.FloorColor.Equals(floorColor, StringComparison.OrdinalIgnoreCase));
         }
 
+        public static void UpdateFloor(Floor floor)
+        {
+
+            var floorToUpdate = floors.First(x =>  x.FloorId == floor.FloorId);
+            floorToUpdate.FloorName = floor.FloorName;
+            floorToUpdate.FloorColor = floor.FloorColor;
+            floorToUpdate.FloorDescription = floor.FloorDescription;
+            floorToUpdate.Price = floor.Price;
+
+        }
+
         public static bool FloorExists(int id)
         {
             return floors.Any(x => x.FloorId == id);

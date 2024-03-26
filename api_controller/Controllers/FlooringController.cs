@@ -33,9 +33,24 @@ namespace api_controller.Controllers
         }
 
         [HttpPost("{id}")]
-        public IActionResult UpdateFloor(int id)
+        [Floor_ValidateFloorIdFilter]
+        [Floor_ValidateUpdateFloorFilter]
+        public IActionResult UpdateFloor(int id, Floor floor)
         {
-            return Ok($"Updating Floor with ID {id}");
+
+            try
+            {
+                FloorRepository.UpdateFloor(floor);
+            }
+            catch
+            {
+                if (!FloorRepository.FloorExists(id)) return NotFound();
+
+                throw;
+            }
+            
+
+            return NoContent();
         }
 
         [HttpDelete("{id}")]

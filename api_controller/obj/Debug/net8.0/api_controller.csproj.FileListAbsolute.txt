@@ -25,7 +25,6 @@ C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp
 C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.api_controller.props
 C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\scopedcss\bundle\api_controller.styles.css
-C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\api_controller.csproj.CopyComplete
 C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\api_controller.dll
 C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\refint\api_controller.dll
 C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\api_controller.pdb
@@ -64,3 +63,4 @@ C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net
 C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\api_controller.pdb
 C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\api_controller.genruntimeconfig.cache
 C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\ref\api_controller.dll
+C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_controller\obj\Debug\net8.0\api_cont.4B1D3A24.Up2Date
