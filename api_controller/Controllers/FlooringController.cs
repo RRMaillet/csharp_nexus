@@ -1,4 +1,5 @@
-﻿using api_controller.Filters;
+﻿using api_controller.Filters.ActionFilters;
+using api_controller.Filters.ExceptionFilters;
 using api_controller.Models;
 using api_controller.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -32,31 +33,25 @@ namespace api_controller.Controllers
             return CreatedAtAction(nameof(GetFloorById), new {id = floor.FloorId}, floor);
         }
 
-        [HttpPost("{id}")]
+        [HttpPut("{id}")]
         [Floor_ValidateFloorIdFilter]
         [Floor_ValidateUpdateFloorFilter]
+        [Floor_HandleUpdateExceptionsFilter]
         public IActionResult UpdateFloor(int id, Floor floor)
         {
-
-            try
-            {
-                FloorRepository.UpdateFloor(floor);
-            }
-            catch
-            {
-                if (!FloorRepository.FloorExists(id)) return NotFound();
-
-                throw;
-            }
-            
+            FloorRepository.UpdateFloor(floor);
 
             return NoContent();
         }
 
         [HttpDelete("{id}")]
+        [Floor_ValidateFloorIdFilter]
         public IActionResult DeleteFloor(int id)
         {
-            return Ok($"Deleting Floor with ID {id}");
+            var floor = FloorRepository.GetFloorById(id);
+            FloorRepository.RemoveFloor(id);
+
+            return Ok(floor);
         }
     }
 }

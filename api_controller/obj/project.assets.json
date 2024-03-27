@@ -437,19 +437,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rmaillet.TORCORP\\.nuget\\packages\\": {}
+    "C:\\Users\\Bob\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rmaillet.TORCORP\\OneDrive - TORLYS INC\\Documents\\Projects\\csharp\\csharp_nexus\\api_controller\\api_controller.csproj",
+      "projectUniqueName": "C:\\Users\\Bob\\Documents\\Projects\\csharp\\csharp_nexus\\api_controller\\api_controller.csproj",
       "projectName": "api_controller",
-      "projectPath": "C:\\Users\\rmaillet.TORCORP\\OneDrive - TORLYS INC\\Documents\\Projects\\csharp\\csharp_nexus\\api_controller\\api_controller.csproj",
-      "packagesPath": "C:\\Users\\rmaillet.TORCORP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rmaillet.TORCORP\\OneDrive - TORLYS INC\\Documents\\Projects\\csharp\\csharp_nexus\\api_controller\\obj\\",
+      "projectPath": "C:\\Users\\Bob\\Documents\\Projects\\csharp\\csharp_nexus\\api_controller\\api_controller.csproj",
+      "packagesPath": "C:\\Users\\Bob\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bob\\Documents\\Projects\\csharp\\csharp_nexus\\api_controller\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rmaillet.TORCORP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bob\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -469,11 +469,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -504,7 +499,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -3,7 +3,7 @@ using api_controller.Models;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api_controller.Filters
+namespace api_controller.Filters.ActionFilters
 {
     public class Floor_ValidateCreateFloorFilterAttribute : ActionFilterAttribute
     {
