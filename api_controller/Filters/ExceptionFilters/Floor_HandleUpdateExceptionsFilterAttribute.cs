@@ -1,4 +1,5 @@
-﻿using api_controller.Models.Repositories;
+﻿using api_controller.Data;
+using api_controller.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -6,6 +7,13 @@ namespace api_controller.Filters.ExceptionFilters
 {
     public class Floor_HandleUpdateExceptionsFilterAttribute: ExceptionFilterAttribute
     {
+        private readonly ApplicationDBContext db;
+
+        public Floor_HandleUpdateExceptionsFilterAttribute(ApplicationDBContext db)
+        {
+            this.db = db;
+        }
+
         public override void OnException(ExceptionContext context)
         {
             base.OnException(context);
@@ -13,7 +21,7 @@ namespace api_controller.Filters.ExceptionFilters
             var strFloorId = context.RouteData.Values["id"] as string;
             if (int.TryParse(strFloorId, out int floorId))
             {
-                if (!FloorRepository.FloorExists(floorId))
+                if (db.Floors.FirstOrDefault(x => x.FloorId == floorId) == null)
                 {
                     context.ModelState.AddModelError("Floor", "Floor Id does not exist anymore!");
                     var problemDetails = new ValidationProblemDetails(context.ModelState)

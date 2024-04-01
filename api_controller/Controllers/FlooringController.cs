@@ -36,10 +36,10 @@ namespace api_controller.Controllers
         [HttpPut("{id}")]
         [Floor_ValidateFloorIdFilter]
         [Floor_ValidateUpdateFloorFilter]
-        [Floor_HandleUpdateExceptionsFilter]
+        [TypeFilter(typeof(Floor_HandleUpdateExceptionsFilterAttribute))]
         public IActionResult UpdateFloor(int id, Floor floor)
         {
-            FloorRepository.UpdateFloor(floor);
+            var FloorToUpdate = HttpContext.Items["floor"] as Floor;
 
             return NoContent();
         }
