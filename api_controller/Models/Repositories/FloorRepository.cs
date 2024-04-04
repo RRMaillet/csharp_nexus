@@ -46,6 +46,15 @@
 
         }
 
+        public static void RemoveFloor(int floorId) 
+        { 
+            var shirtToRemove = GetFloorById(floorId);
+            if (shirtToRemove != null)
+            {
+                floors.Remove(shirtToRemove);
+            }
+        }
+
         public static bool FloorExists(int id)
         {
             return floors.Any(x => x.FloorId == id);

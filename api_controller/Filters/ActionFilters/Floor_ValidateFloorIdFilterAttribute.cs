@@ -2,8 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using api_controller.Models.Repositories;
 
-namespace api_controller.Filters
-{
+namespace api_controller.Filters.ActionFilters 
+{ 
+
     public class Floor_ValidateFloorIdFilterAttribute : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext context)
