@@ -10,6 +10,7 @@
             <td>Color</td>
             <td>Description</td>
             <td>Price</td>
+            <td></td>
         </tr>
     </thead>
     <tbody>
@@ -20,8 +21,11 @@
                 <td>@floor.FloorColor</td>
                 <td>@floor.FloorDescription</td>
                 <td>@(floor.Price.HasValue? floor.Price.Value.ToString("c") : "")</td>
+                <td><a class="btn btn-link" asp-controller="Floors" asp-action="UpdateFloor" asp-route-floorId="@floor.FloorId">Edit</a></td>
             </tr>
         }
     </tbody>
 
 </table>
+<br />
+<a class = "btn btn-primary" asp-controller="Floors" asp-action="CreateFloor">Create</a>

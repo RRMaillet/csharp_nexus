@@ -18,8 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_WebFront
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/rmaillet.TORCORP/OneDrive - TORLYS INC/Documents/Projects/csharp/csharp_nexus/api_WebFront/Views/Floors/CreateFloor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXENyZWF0ZUZsb29yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rmaillet.TORCORP/OneDrive - TORLYS INC/Documents/Projects/csharp/csharp_nexus/api_WebFront/Views/Floors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rmaillet.TORCORP/OneDrive - TORLYS INC/Documents/Projects/csharp/csharp_nexus/api_WebFront/Views/Floors/UpdateFloor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXFVwZGF0ZUZsb29yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rmaillet.TORCORP/OneDrive - TORLYS INC/Documents/Projects/csharp/csharp_nexus/api_WebFront/Views/Home/Index.cshtml]

@@ -22,6 +22,7 @@ namespace api_WebFront.Models
         public string? FloorDescription { get; set;}
 
         [Floor_EnsureCorrectPrice]
+        [Required]
         public double? Price { get; set;}
     }
 }

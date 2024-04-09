@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("api_controller")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95b1c4b2d291b55c4f4781db9dd5889b4de05bd5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34828b35c7aeff89d5c108d1920bf494ecea171b")]
 [assembly: System.Reflection.AssemblyProductAttribute("api_controller")]
 [assembly: System.Reflection.AssemblyTitleAttribute("api_controller")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

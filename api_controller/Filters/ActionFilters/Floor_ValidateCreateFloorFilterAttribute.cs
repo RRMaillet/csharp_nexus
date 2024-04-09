@@ -30,7 +30,7 @@ namespace api_controller.Filters.ActionFilters
             {
                 var existingFloor = db.Floors.FirstOrDefault(x => !string.IsNullOrWhiteSpace(x.FloorName) && 
                                                                   !string.IsNullOrWhiteSpace(floor.FloorName) && 
-                                                                  x.FloorName.Equals(floor.FloorName, StringComparison.CurrentCultureIgnoreCase) && 
+                                                                  x.FloorName.ToLower() == floor.FloorColor.ToLower() && 
                                                                   !string.IsNullOrWhiteSpace(x.FloorColor) && 
                                                                   !string.IsNullOrWhiteSpace(floor.FloorColor) && 
                                                                   x.FloorColor.ToLower() == floor.FloorColor.ToLower());

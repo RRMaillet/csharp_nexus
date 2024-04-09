@@ -1,0 +1,62 @@
+﻿@model Floor
+
+<h3> Update Floor</h3>
+<br />
+<form method="post" asp-action="UpdateFloor">
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+    <div class="mb-3 row">
+        <div class="col-2">
+            <label asp-for="FloorName" class="col-form-label"></label>
+        </div>
+        <div class="col-6">
+            <input type="text" asp-for="FloorName" class="form-control" />
+        </div>
+        <div class="col">
+            <span class="text-danger" asp-validation-for="FloorName"></span>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <div class="col-2">
+            <label asp-for="FloorColor" class="col-form-label"></label>
+        </div>
+        <div class="col-6">
+            <input type="text" asp-for="FloorColor" class="form-control" />
+        </div>
+        <div class="col">
+            <span class="text-danger" asp-validation-for="FloorColor"></span>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <div class="col-2">
+            <label asp-for="FloorDescription" class="col-form-label"></label>
+        </div>
+        <div class="col-6">
+            <input type="text" asp-for="FloorDescription" class="form-control" />
+        </div>
+        <div class="col">
+            <span class="text-danger" asp-validation-for="FloorDescription"></span>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <div class="col-2">
+            <label asp-for="Price" class="col-form-label"></label>
+        </div>
+        <div class="col-6">
+            <input type="number" asp-for="Price" class="form-control" min="1" />
+        </div>
+        <div class="col">
+            <span class="text-danger" asp-validation-for="Price"></span>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-2">
+            <input type="submit" class="btn btn-primary" value="Save"/>
+        </div>
+        <div class="col-6">
+            
+        </div>
+    </div>
+</form>
