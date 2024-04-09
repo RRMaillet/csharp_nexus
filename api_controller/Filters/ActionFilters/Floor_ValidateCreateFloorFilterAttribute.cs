@@ -2,11 +2,14 @@
 using api_controller.Models;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
+using api_controller.Data;
 
 namespace api_controller.Filters.ActionFilters
 {
-    public class Floor_ValidateCreateFloorFilterAttribute : ActionFilterAttribute
+    public class Floor_ValidateCreateFloorFilterAttribute(ApplicationDBContext db) : ActionFilterAttribute
     {
+        private readonly ApplicationDBContext db = db;
+
         public override void OnActionExecuting(ActionExecutingContext context)
         {
             base.OnActionExecuting(context);
@@ -25,7 +28,13 @@ namespace api_controller.Filters.ActionFilters
             }
             else
             {
-                var existingFloor = FloorRepository.GetFloorByProperties(floor.FloorName, floor.FloorColor);
+                var existingFloor = db.Floors.FirstOrDefault(x => !string.IsNullOrWhiteSpace(x.FloorName) && 
+                                                                  !string.IsNullOrWhiteSpace(floor.FloorName) && 
+                                                                  x.FloorName.Equals(floor.FloorName, StringComparison.CurrentCultureIgnoreCase) && 
+                                                                  !string.IsNullOrWhiteSpace(x.FloorColor) && 
+                                                                  !string.IsNullOrWhiteSpace(floor.FloorColor) && 
+                                                                  x.FloorColor.ToLower() == floor.FloorColor.ToLower());
+
                 if (existingFloor != null)
                 {
                     context.ModelState.AddModelError("floor", "Floor object already exists");

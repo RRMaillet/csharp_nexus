@@ -1,4 +1,5 @@
-﻿using api_controller.Filters.ActionFilters;
+﻿using api_controller.Data;
+using api_controller.Filters.ActionFilters;
 using api_controller.Filters.ExceptionFilters;
 using api_controller.Models;
 using api_controller.Models.Repositories;
@@ -9,49 +10,61 @@ namespace api_controller.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class FlooringController : ControllerBase
+    public class FlooringController(ApplicationDBContext db) : ControllerBase
     {
+        private readonly ApplicationDBContext db = db;
+
         [HttpGet]
         public IActionResult GetFloors()
         {
-            return Ok(FloorRepository.GetAllFloors());
+            return Ok(db.Floors.ToList());
         }
 
         [HttpGet("{id}")]
-        [Floor_ValidateFloorIdFilter]
-        public IActionResult GetFloorById(int id)
+        [TypeFilter(typeof(Floor_ValidateFloorIdFilterAttribute))]
+        public IActionResult GetFloorById()
         {
-            
-            return Ok(FloorRepository.GetFloorById(id));
+            return Ok(HttpContext.Items["floor"]);
         }
 
         [HttpPost]
-        [Floor_ValidateCreateFloorFilter]
+        [TypeFilter(typeof (Floor_ValidateCreateFloorFilterAttribute))]
         public IActionResult CreateFloor([FromBody] Floor floor)
         {
-            FloorRepository.AddFloor(floor);
+            
+            db.Floors.Add(floor);
+            db.SaveChanges();
+
             return CreatedAtAction(nameof(GetFloorById), new {id = floor.FloorId}, floor);
         }
 
         [HttpPut("{id}")]
-        [Floor_ValidateFloorIdFilter]
         [Floor_ValidateUpdateFloorFilter]
+        [TypeFilter(typeof(Floor_ValidateFloorIdFilterAttribute))]
         [TypeFilter(typeof(Floor_HandleUpdateExceptionsFilterAttribute))]
-        public IActionResult UpdateFloor(int id, Floor floor)
+        public IActionResult UpdateFloor(Floor floor)
         {
-            var FloorToUpdate = HttpContext.Items["floor"] as Floor;
+            var floorToUpdate = HttpContext.Items["floor"] as Floor;
+            floorToUpdate.FloorName = floor.FloorName;
+            floorToUpdate.FloorColor = floor.FloorColor;
+            floorToUpdate.FloorDescription = floor.FloorDescription;
+            floorToUpdate.Price = floor.Price;
+
+            db.SaveChanges();
 
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        [Floor_ValidateFloorIdFilter]
-        public IActionResult DeleteFloor(int id)
+        [TypeFilter(typeof(Floor_ValidateFloorIdFilterAttribute))]
+        public IActionResult DeleteFloor()
         {
-            var floor = FloorRepository.GetFloorById(id);
-            FloorRepository.RemoveFloor(id);
+            var floorToDelete = HttpContext.Items["floor"] as Floor;
 
-            return Ok(floor);
+            db.Floors.Remove(floorToDelete);
+            db.SaveChanges();
+
+            return Ok(floorToDelete);
         }
     }
 }

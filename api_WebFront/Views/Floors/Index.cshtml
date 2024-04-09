@@ -1,0 +1,27 @@
+﻿@model List<Floor>
+
+
+<h3>Floors</h3>
+<br/>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Color</td>
+            <td>Description</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var floor in Model)
+        {
+            <tr>
+                <td>@floor.FloorName</td>
+                <td>@floor.FloorColor</td>
+                <td>@floor.FloorDescription</td>
+                <td>@(floor.Price.HasValue? floor.Price.Value.ToString("c") : "")</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

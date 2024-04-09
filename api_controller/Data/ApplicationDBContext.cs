@@ -3,10 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api_controller.Data
 {
-    public class ApplicationDBContext: DbContext
+    public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : DbContext(options)
     {
         public DbSet<Floor> Floors { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

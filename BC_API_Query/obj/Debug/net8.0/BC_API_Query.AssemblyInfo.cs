@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BC_API_Query")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+030429c59c32a4c6b8231ee69ac7832685c3fc62")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95b1c4b2d291b55c4f4781db9dd5889b4de05bd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("BC_API_Query")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BC_API_Query")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
