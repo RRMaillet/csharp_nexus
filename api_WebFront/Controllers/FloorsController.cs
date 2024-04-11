@@ -51,5 +51,22 @@ namespace api_WebFront.Controllers
             
         }
 
+        [HttpPost]
+        public async Task<IActionResult> UpdateFloor(Floor floor)
+        {
+            if (ModelState.IsValid)
+            {
+                await webApiExecuter.InvokePut($"Flooring/{floor.FloorId}", floor);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(floor);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> DeleteFloor(int floorId)
+        {
+            await webApiExecuter.InvokeDelete($"flooring/{floorId}");
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

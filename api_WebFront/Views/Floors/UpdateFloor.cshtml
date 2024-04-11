@@ -3,6 +3,7 @@
 <h3> Update Floor</h3>
 <br />
 <form method="post" asp-action="UpdateFloor">
+    <input type="hidden" asp-for="FloorId" />
     <div class="text-danger" asp-validation-summary="ModelOnly"></div>
     <div class="mb-3 row">
         <div class="col-2">

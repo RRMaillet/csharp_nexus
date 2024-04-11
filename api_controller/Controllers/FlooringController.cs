@@ -22,7 +22,7 @@ namespace api_controller.Controllers
 
         [HttpGet("{id}")]
         [TypeFilter(typeof(Floor_ValidateFloorIdFilterAttribute))]
-        public IActionResult GetFloorById()
+        public IActionResult GetFloorById(int Id)
         {
             return Ok(HttpContext.Items["floor"]);
         }
@@ -42,7 +42,7 @@ namespace api_controller.Controllers
         [Floor_ValidateUpdateFloorFilter]
         [TypeFilter(typeof(Floor_ValidateFloorIdFilterAttribute))]
         [TypeFilter(typeof(Floor_HandleUpdateExceptionsFilterAttribute))]
-        public IActionResult UpdateFloor(Floor floor)
+        public IActionResult UpdateFloor(int Id, Floor floor)
         {
             var floorToUpdate = HttpContext.Items["floor"] as Floor;
             floorToUpdate.FloorName = floor.FloorName;
@@ -57,7 +57,7 @@ namespace api_controller.Controllers
 
         [HttpDelete("{id}")]
         [TypeFilter(typeof(Floor_ValidateFloorIdFilterAttribute))]
-        public IActionResult DeleteFloor()
+        public IActionResult DeleteFloor(int Id)
         {
             var floorToDelete = HttpContext.Items["floor"] as Floor;
 
