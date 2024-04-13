@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rmaillet.TORCORP\\OneDrive - TORLYS INC\\Documents\\Projects\\csharp\\csharp_nexus\\api_WebFront\\api_WebFront.csproj": {}
+    "C:\\Users\\Bob\\Documents\\Projects\\csharp\\csharp_nexus\\api_WebFront\\api_WebFront.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rmaillet.TORCORP\\OneDrive - TORLYS INC\\Documents\\Projects\\csharp\\csharp_nexus\\api_WebFront\\api_WebFront.csproj": {
+    "C:\\Users\\Bob\\Documents\\Projects\\csharp\\csharp_nexus\\api_WebFront\\api_WebFront.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rmaillet.TORCORP\\OneDrive - TORLYS INC\\Documents\\Projects\\csharp\\csharp_nexus\\api_WebFront\\api_WebFront.csproj",
+        "projectUniqueName": "C:\\Users\\Bob\\Documents\\Projects\\csharp\\csharp_nexus\\api_WebFront\\api_WebFront.csproj",
         "projectName": "api_WebFront",
-        "projectPath": "C:\\Users\\rmaillet.TORCORP\\OneDrive - TORLYS INC\\Documents\\Projects\\csharp\\csharp_nexus\\api_WebFront\\api_WebFront.csproj",
-        "packagesPath": "C:\\Users\\rmaillet.TORCORP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rmaillet.TORCORP\\OneDrive - TORLYS INC\\Documents\\Projects\\csharp\\csharp_nexus\\api_WebFront\\obj\\",
+        "projectPath": "C:\\Users\\Bob\\Documents\\Projects\\csharp\\csharp_nexus\\api_WebFront\\api_WebFront.csproj",
+        "packagesPath": "C:\\Users\\Bob\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bob\\Documents\\Projects\\csharp\\csharp_nexus\\api_WebFront\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rmaillet.TORCORP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bob\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

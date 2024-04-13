@@ -2,6 +2,9 @@
 
 
 <h3>Floors</h3>
+<div class="text-danger" asp-validation-summary="All"></div>
+@if(Model != null) 
+{
 <br/>
 <table class="table table-striped">
     <thead>
@@ -30,4 +33,5 @@
 
 </table>
 <br />
+}
 <a class = "btn btn-primary" asp-controller="Floors" asp-action="CreateFloor">Create</a>

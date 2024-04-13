@@ -1,6 +1,5 @@
 ﻿using api_controller.Models.Validations;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
 
 namespace api_controller.Models
 {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using api_WebFront.Models;
 using api_WebFront.Data;
+using System.ComponentModel;
 
 namespace api_WebFront.Controllers
 {
@@ -27,10 +28,17 @@ namespace api_WebFront.Controllers
         {
             if (ModelState.IsValid)
             {
-                var response = await webApiExecuter.InvokePost("Flooring", floor);
-                if (response != null)
+                try
                 {
-                    return RedirectToAction(nameof(Index));
+                    var response = await webApiExecuter.InvokePost("Flooring", floor);
+                    if (response != null)
+                    {
+                        return RedirectToAction(nameof(Index));
+                    }
+                }
+                catch (WebApiException ex)
+                {
+                    HandleWebApiException(ex);
                 }
             }
             return View(floor);
@@ -39,11 +47,19 @@ namespace api_WebFront.Controllers
 
         public async Task<IActionResult> UpdateFloor(int floorId)
         {
-            var floor = await webApiExecuter.InvokeGet<Floor>($"flooring/{floorId}");
-
-            if (floor != null)
+            try
             {
-                return View(floor);
+                var floor = await webApiExecuter.InvokeGet<Floor>($"flooring/{floorId}");
+
+                if (floor != null)
+                {
+                    return View(floor);
+                }
+            }
+            catch(WebApiException ex)
+            {
+                HandleWebApiException(ex);
+                return View();
             }
 
             return NotFound();
@@ -56,8 +72,14 @@ namespace api_WebFront.Controllers
         {
             if (ModelState.IsValid)
             {
+                try { 
                 await webApiExecuter.InvokePut($"Flooring/{floor.FloorId}", floor);
                 return RedirectToAction(nameof(Index));
+                }
+                catch(WebApiException ex)
+                {
+                    HandleWebApiException(ex);
+                }
             }
             return View(floor);
         }
@@ -65,8 +87,33 @@ namespace api_WebFront.Controllers
         [HttpGet]
         public async Task<IActionResult> DeleteFloor(int floorId)
         {
-            await webApiExecuter.InvokeDelete($"flooring/{floorId}");
-            return RedirectToAction(nameof(Index));
+
+            try 
+            { 
+                await webApiExecuter.InvokeDelete($"flooring/{floorId}");
+                return RedirectToAction(nameof(Index));
+            }
+            catch(WebApiException ex)
+            {
+                HandleWebApiException(ex);
+                return View(nameof(Index), await webApiExecuter.InvokeGet<List<Floor>>("flooring"));
+            }
+
+
         }
+
+        private void HandleWebApiException(WebApiException ex)
+        {
+            if (ex.ErrorResponse != null &&
+                ex.ErrorResponse.Errors != null &&
+                ex.ErrorResponse.Errors.Count > 0)
+            {
+                foreach (var message in ex.ErrorResponse.Errors)
+                {
+                    ModelState.AddModelError(message.Key, string.Join("; ", message.Value));
+                }
+
+            }
+        }   
     }
 }

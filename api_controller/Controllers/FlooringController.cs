@@ -1,8 +1,8 @@
 ﻿using api_controller.Data;
 using api_controller.Filters.ActionFilters;
+using api_controller.Filters.AuthFilters;
 using api_controller.Filters.ExceptionFilters;
 using api_controller.Models;
-using api_controller.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api_controller.Controllers
@@ -10,6 +10,7 @@ namespace api_controller.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [JwtTokenAuthFilter]
     public class FlooringController(ApplicationDBContext db) : ControllerBase
     {
         private readonly ApplicationDBContext db = db;

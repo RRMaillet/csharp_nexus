@@ -29,3 +29,34 @@ C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp
 C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.pdb
 C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.genruntimeconfig.cache
 C:\Users\rmaillet.TORCORP\OneDrive - TORLYS INC\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\ref\api_WebFront.dll
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\bin\Debug\net8.0\appsettings.json
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\bin\Debug\net8.0\api_WebFront.staticwebassets.runtime.json
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\bin\Debug\net8.0\api_WebFront.exe
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\bin\Debug\net8.0\api_WebFront.deps.json
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\bin\Debug\net8.0\api_WebFront.runtimeconfig.json
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\bin\Debug\net8.0\api_WebFront.dll
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\bin\Debug\net8.0\api_WebFront.pdb
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.AssemblyInfoInputs.cache
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.AssemblyInfo.cs
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.csproj.CoreCompileInputs.cache
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.RazorAssemblyInfo.cache
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.RazorAssemblyInfo.cs
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.sourcelink.json
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\staticwebassets\msbuild.api_WebFront.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\staticwebassets\msbuild.build.api_WebFront.props
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.api_WebFront.props
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.api_WebFront.props
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\scopedcss\bundle\api_WebFront.styles.css
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\scopedcss\projectbundle\api_WebFront.bundle.scp.css
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.dll
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\refint\api_WebFront.dll
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.pdb
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\api_WebFront.genruntimeconfig.cache
+C:\Users\Bob\Documents\Projects\csharp\csharp_nexus\api_WebFront\obj\Debug\net8.0\ref\api_WebFront.dll

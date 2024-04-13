@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-
-namespace api_WebFront.Data
+﻿namespace api_WebFront.Data
 {
     public class WebApiExecuter : IWebApiExecuter
     {
@@ -59,7 +57,7 @@ namespace api_WebFront.Data
             if (!httpResponse.IsSuccessStatusCode)
             {
                 var errorJson = await httpResponse.Content.ReadAsStringAsync();
-                throw new WebApiExceptions(errorJson);
+                throw new WebApiException(errorJson);                
             }
         }
     }

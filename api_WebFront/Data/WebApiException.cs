@@ -2,11 +2,11 @@
 
 namespace api_WebFront.Data
 {
-    public class WebApiExceptions: Exception
+    public class WebApiException: Exception
     {
         public ErrorResponse? ErrorResponse { get; }
 
-        public WebApiExceptions(string errorJson)
+        public WebApiException(string errorJson)
         {
             ErrorResponse = JsonSerializer.Deserialize<ErrorResponse>(errorJson);
         }
